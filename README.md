@@ -37,7 +37,7 @@ curl -X POST \
 #### Manipulate products directly from Solr
 
 ```bash
-curl http://localhost:8983/solr/product/update -d "[ {\"id\" : \"1\",  \"name\" : \"Smartphone\" }]"
+curl http://localhost:8983/solr/product/update?commit=true -d "[ {\"id\" : \"1\",  \"name\" : \"Smartphone\" }]"
 ```
 
 Show directly from Solr
@@ -58,6 +58,8 @@ curl -X POST \
 ```
 
 ## References
+
+- http://makble.com/how-to-create-new-collection-in-solr
 - https://lucene.apache.org/solr/guide/7_1/solr-tutorial.html
 - https://dzone.com/articles/spring-data-solr-cloud-zookeeper-mongodb-ubuntu-in
 - http://www.baeldung.com/spring-data-solr
