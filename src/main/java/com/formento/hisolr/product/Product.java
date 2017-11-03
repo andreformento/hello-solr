@@ -1,4 +1,4 @@
-package com.formento.hisolr;
+package com.formento.hisolr.product;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
@@ -8,10 +8,10 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 public class Product {
 
 	@Id
-    @Indexed(name = "id", type = "string")
-    private String id;
- 
-    @Indexed(name = "name", type = "string")
-    private String name;
- 
+	@Indexed(name = "id", type = "string")
+	private String id;
+
+	@Indexed(name = "name", type = "string")
+	private String name;
+
 }
