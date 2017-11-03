@@ -1,27 +1,37 @@
-zookeeper:
-  image: "zookeeper:3.4"
-  cpu_shares: 100
-  ports:
-   - "2181:2181"
-  container_name: "zookeeper"
-  hostname: "zookeeper"
+version: '2'
 
-solr1:
-  image: solr:7.1
-  cpu_shares: 100
-  ports:
-    - "8983:8983"
-  container_name: solr1
-  links:
-    - zookeeper:ZK
-  command: /opt/solr/bin/solr start -f -z zookeeper:2181
+services:
+  zookeeper:
+    image: "zookeeper:3.4"
+    cpu_shares: 100
+    ports:
+     - "2181:2181"
+    container_name: "zookeeper"
+    hostname: "zookeeper"
 
-solr2:
-  image: solr:7.1
-  cpu_shares: 100
-  ports:
-    - "8984:8983"
-  container_name: solr2
-  links:
-    - zookeeper:ZK
-  command: /opt/solr/bin/solr start -f -z zookeeper:2181
+  solr1:
+    image: solr:7.1
+    cpu_shares: 100
+    ports:
+      - "8983:8983"
+    volumes:
+      - solrdata:/opt/solr/server/solr
+    container_name: solr1
+    links:
+      - zookeeper:ZK
+    command: /opt/solr/bin/solr start -f -z zookeeper:2181 # -e cloud
+
+  solr2:
+    image: solr:7.1
+    cpu_shares: 100
+    ports:
+      - "8984:8983"
+    volumes:
+      - solrdata:/opt/solr/server/solr
+    container_name: solr2
+    links:
+      - zookeeper:ZK
+    command: /opt/solr/bin/solr start -f -z zookeeper:2181 # -e cloud
+
+volumes:
+  solrdata:
