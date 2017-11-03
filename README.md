@@ -49,7 +49,7 @@ curl 'http://localhost:8983/solr/product/get?id=1'
 
 - Show all
 ```bash
-http://localhost:8983/solr/product/select?q=*:*
+curl 'http://localhost:8983/solr/product/select?q=*:*'
 ```
 
 ### Spring Boot Application with Spring Data Solr
