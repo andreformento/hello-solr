@@ -10,13 +10,13 @@ docker-compose -up
 
 ### Solr
 
-#### Create a `product` collection executing a `solr command` (a new config called `myconfig` will be created)
+- Create a `product` collection executing a `solr command` (a new config called `myconfig` will be created)
 
 ```bash
 docker exec -it --user=solr solr1 solr create -c product -n myconfig
 ```
 
-#### Create a `product` collection calling a `REST Api`
+- Create a `product` collection calling a `REST Api`
 
 First, create a config
 
