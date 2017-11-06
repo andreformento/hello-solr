@@ -1,4 +1,4 @@
-package com.formento.hisolr.product;
+package com.formento.hellosolr.product;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;

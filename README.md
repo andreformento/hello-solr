@@ -1,4 +1,4 @@
-# hi-solr
+# hello-solr
 
 ## How to
 
