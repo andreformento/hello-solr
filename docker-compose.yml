@@ -15,7 +15,7 @@ services:
     ports:
       - "8983:8983"
     volumes:
-      - solrdata:/opt/solr/server/solr
+      - solrdata1:/opt/solr/server/solr
     container_name: solr1
     links:
       - zookeeper:ZK
@@ -27,11 +27,12 @@ services:
     ports:
       - "8984:8983"
     volumes:
-      - solrdata:/opt/solr/server/solr
+      - solrdata2:/opt/solr/server/solr
     container_name: solr2
     links:
       - zookeeper:ZK
     command: /opt/solr/bin/solr start -f -z zookeeper:2181 # -e cloud
 
 volumes:
-  solrdata:
+  solrdata1:
+  solrdata2:
