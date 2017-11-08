@@ -1,4 +1,4 @@
-package com.formento.hisolr;
+package com.formento.hellosolr;
 
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.impl.CloudSolrClient;
@@ -11,7 +11,7 @@ import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 
 @Configuration
 @EnableSolrRepositories(
-		basePackages = "com.formento.hisolr",
+		basePackages = "com.formento.hellosolr",
 		namedQueriesLocation = "classpath:solr-named-queries.properties",
 		multicoreSupport = true)
 @ComponentScan

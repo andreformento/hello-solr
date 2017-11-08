@@ -1,4 +1,4 @@
-package com.formento.hisolr;
+package com.formento.hellosolr;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HiSolrApplicationTests {
+public class HelloSolrApplicationTests {
 
 	@Test
 	public void contextLoads() {

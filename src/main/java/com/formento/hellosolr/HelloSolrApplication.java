@@ -1,12 +1,12 @@
-package com.formento.hisolr;
+package com.formento.hellosolr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HiSolrApplication {
+public class HelloSolrApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HiSolrApplication.class, args);
+		SpringApplication.run(HelloSolrApplication.class, args);
 	}
 }
