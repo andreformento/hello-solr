@@ -20,6 +20,8 @@ services:
     links:
       - zookeeper:ZK
     command: /opt/solr/bin/solr start -f -z zookeeper:2181
+    depends_on:
+      - zookeeper
 
   solr2:
     image: solr:7.1
@@ -32,6 +34,8 @@ services:
     links:
       - zookeeper:ZK
     command: /opt/solr/bin/solr start -f -z zookeeper:2181
+    depends_on:
+      - zookeeper
 
 volumes:
   solrdata1:

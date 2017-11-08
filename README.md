@@ -8,6 +8,12 @@
 docker-compose up
 ```
 
+Run just one single Solr
+
+```bash
+docker run -p 8983:8983  solr:7.1
+```
+
 ### Solr
 
 - Create a `product` collection executing a `solr command` (a new config called `myconfig` will be created)

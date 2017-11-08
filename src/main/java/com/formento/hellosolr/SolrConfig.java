@@ -26,7 +26,7 @@ public class SolrConfig {
 	}
 
 	@Bean
-	public SolrTemplate solrTemplate(SolrClient solrClient) throws Exception {
+	public SolrTemplate solrTemplate(SolrClient solrClient) {
 		return new SolrTemplate(solrClient);
 	}
 
