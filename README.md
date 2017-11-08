@@ -5,7 +5,7 @@
 ### Run all :smiley:
 
 ```bash
-docker-compose -up
+docker-compose up
 ```
 
 ### Solr
