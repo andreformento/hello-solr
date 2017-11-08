@@ -19,7 +19,7 @@ services:
     container_name: solr1
     links:
       - zookeeper:ZK
-    command: /opt/solr/bin/solr start -f -z zookeeper:2181 # -e cloud
+    command: /opt/solr/bin/solr start -f -z zookeeper:2181
 
   solr2:
     image: solr:7.1
@@ -31,7 +31,7 @@ services:
     container_name: solr2
     links:
       - zookeeper:ZK
-    command: /opt/solr/bin/solr start -f -z zookeeper:2181 # -e cloud
+    command: /opt/solr/bin/solr start -f -z zookeeper:2181
 
 volumes:
   solrdata1:
