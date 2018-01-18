@@ -11,7 +11,7 @@ docker-compose up
 Run just one single Solr
 
 ```bash
-docker run -p 8983:8983  solr:7.1
+docker run --name my_solr --rm -p 8983:8983 solr:7.1
 ```
 
 ### Solr
@@ -69,6 +69,21 @@ curl -X POST \
      http://localhost:8080/products
 ```
 
+## Examples of index
+
+Execute an interactive bash shell on the container
+
+```bash
+docker exec -it my_solr bash
+```
+
+Load data
+
+```bash
+bin/solr create -c gettingstarted
+bin/post -c gettingstarted example/exampledocs/*.xml
+```
+
 ## References
 
 - http://makble.com/how-to-create-new-collection-in-solr
@@ -77,3 +92,4 @@ curl -X POST \
 - http://www.baeldung.com/spring-data-solr
 - https://examples.javacodegeeks.com/enterprise-java/apache-solr/apache-solr-hello-world-example
 - https://gist.github.com/subfuzion/08c5d85437d5d4f00e58
+- https://lucene.apache.org/solr/guide/7_1/post-tool.html#indexing-xml
