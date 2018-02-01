@@ -8,18 +8,15 @@
 docker-compose up
 ```
 
-Run just one single Solr
-
-```bash
-docker run --name my_solr --rm -p 8983:8983 solr:7.1
-```
+- Run just one single Solr: `docker run --name my_solr --rm -p 8983:8983 solr:7.1`
+- Access http://localhost:8983
 
 ### Solr
 
 - Create a `product` collection executing a `solr command` (a new config called `myconfig` will be created)
 
 ```bash
-docker exec -it --user=solr solr1 solr create -c product -n myconfig
+docker exec -it --user=solr my_solr solr create -c product -n myconfig
 ```
 
 - Create a `product` collection calling a `REST Api`
