@@ -27,7 +27,6 @@ public class ExampleSolrJClientApplication {
 		   $ curl -X POST \
 		         -H "Content-Type: application/json" \
 		         'http://localhost:8983/solr/admin/collections?action=CREATE&name=collection1&numShards=2&replicationFactor=2&maxShardsPerNode=2&collection.configName=myconfig'
-		         docker-compose down && docker volume rm hellosolr_solrdata1 hellosolr_solrdata2
 		   ...
 		   $ docker-compose down && docker volume rm hellosolr_solrdata1 hellosolr_solrdata2
 		   ```
