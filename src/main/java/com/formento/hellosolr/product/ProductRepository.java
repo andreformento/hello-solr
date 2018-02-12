@@ -9,12 +9,12 @@ import java.util.List;
 
 public interface ProductRepository extends SolrCrudRepository<Product, String> {
 
-	public List<Product> findByName(String name);
+    public List<Product> findByName(String name);
 
-	@Query("id:*?0* OR name:*?0*")
-	public Page<Product> findByCustomQuery(String searchTerm, Pageable pageable);
+    @Query("id:*?0* OR name:*?0*")
+    Page<Product> findByCustomQuery(String searchTerm, Pageable pageable);
 
-	@Query(name = "Product.findByNamedQuery")
-	public Page<Product> findByNamedQuery(String searchTerm, Pageable pageable);
+    @Query(name = "Product.findByNamedQuery")
+    Page<Product> findByNamedQuery(String searchTerm, Pageable pageable);
 
 }
